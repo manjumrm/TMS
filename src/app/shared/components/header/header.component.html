@@ -1,0 +1,38 @@
+<mat-toolbar style="background-color: #3700B3; color: #FFFFFF;">
+    <mat-toolbar-row>
+        <button mat-icon-button (click)="toggleSideBar()" id="sideBar">
+            <mat-icon>menu</mat-icon>
+        </button>
+        <div class="text-center" style="margin-left: 30rem;">
+            <h3>TICKET MANAGEMENT SYSTEM</h3>
+        </div>
+        <div fxFlex fxLayout="row" fxLayoutAlign="flex-end" class="sideIcons">
+            <ul fxLayout="row" fxLayoutGap="2px">              
+                <li>
+                    <button mat-button [matMenuTriggerFor]="menu">
+                        <mat-icon>settings</mat-icon>
+                    </button>
+                    <mat-menu #menu="matMenu">
+                        <button mat-menu-item>
+                            <mat-icon>supervised_user_circle</mat-icon>
+                            User Details
+                        </button>
+                        <button mat-menu-item>
+                            <mat-icon>contact_support</mat-icon>
+                             Contact Us
+                        </button>
+                        <button mat-menu-item>
+                            <mat-icon>lock_open</mat-icon>
+                            Change Password
+                        </button>
+                        <button mat-menu-item (click)="logOut()">
+                            <mat-icon>exit_to_app</mat-icon>
+                            Sign Out
+                        </button>
+                    </mat-menu>
+                </li>
+            </ul>
+        </div>
+    </mat-toolbar-row>
+
+</mat-toolbar>

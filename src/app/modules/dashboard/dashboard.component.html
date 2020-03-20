@@ -1,0 +1,52 @@
+<div class="container-fluid">
+    <div class="card-deck">
+
+        <div class="card shadow-lg p-3 mb-5 rounded " (click)="getOpenTickets()" id="cardDesign1">
+            <div class="card-body text-center">
+                <img src="assets\icons\open.png" class="image">
+                <span style="font-size: 30px;">Open</span>
+               <p class="card-text " id="value"><ng2-odometer [number]="openNumber" [config]="{ }"></ng2-odometer></p>               
+            </div>
+        </div>
+        <div class="card shadow-lg p-3 mb-5 rounded" id="cardDesign2" (click)="getInProgressTickets()">
+            <div class="card-body text-center">
+                <img src="assets\icons\progress.png" class="image">
+                <span style="font-size: 25px;">In-Progress</span>
+                <p class="card-text" id="value"><ng2-odometer [number]="inProgress" [config]="{ }"></ng2-odometer></p>               
+            </div>
+        </div>
+        <div class="card shadow-lg p-3 mb-5 rounded" id="cardDesign3" (click)="getFixedTickets()">
+            <div class="card-body text-center">
+                <img src="assets\icons\debug.png" class="image">
+                <span style="font-size: 30px;">Fixed</span>
+                <p class="card-text" id="value"><ng2-odometer [number]="fixed" [config]="{ }"></ng2-odometer></p>               
+            </div>
+        </div>
+    </div>
+    <div class="card-deck">
+        <div class="card shadow-lg p-3 mb-5 rounded" id="cardDesign4" (click)="getHoldTickets()">
+            <div class="card-body text-center">
+                <img src="assets\icons\icons8-pause-100.png" class="image">
+                <span style="font-size: 30px;">Hold</span>
+                <p class="card-text" id="value"><ng2-odometer [number]="hold" [config]="{ }"></ng2-odometer></p>               
+            </div>
+        </div>
+        <div class="card shadow-lg p-3 mb-5 rounded" id="cardDesign5" (click)="getClosedTickets()">
+            <div class="card-body text-center">
+                <img src="assets\icons\closed.png" class="image">
+                <span style="font-size: 30px;">Closed</span>
+                <p class="card-text" id="value"><ng2-odometer [number]="closed" [config]="{ }"></ng2-odometer></p>               
+            </div>
+        </div>
+        <div class="card shadow-lg p-3 mb-5 rounded" id="cardDesign6" (click)="getReOpenTickets()">
+            <div class="card-body text-center">
+                <img src="assets\icons\refresh.png" class="image">
+                <span style="font-size: 30px;">Re-Open</span>
+                <p class="card-text" id="value"><ng2-odometer [number]="reOpen" [config]="{ }"></ng2-odometer></p>               
+            </div>
+        </div>
+
+    </div>
+    <!-- <router-outlet></router-outlet> -->
+   
+</div>
